@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVOICE GENERATOR</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    
+    <div class="container"> 
+
+        <form id="form"> 
+            <h1>Invoice Generator</h1>  
+            <label for="companyName">Company Name:</label>
+            <input autocomplete="off" type="text" id="companyName" required>
+
+            <label for="firstBandRange">First Band Range:</label>
+            <input autocomplete="off" type="text" id="firstBandRange" placeholder="e.g., 65-109.9" required>
+            
+            <label for="firstBandPrice">First Band Price:</label>
+            <input autocomplete="off" type="text" id="firstBandPrice" required>
+
+            <label for="secondBandRange">Second Band Range:</label>
+            <input autocomplete="off" type="text" id="secondBandRange" placeholder="e.g., 65-109.9" required>
+            
+            <label for="secondBandPrice">Second Band Price:</label>
+            <input autocomplete="off" type="text" id="secondBandPrice" required>
+             
+            <label for="thirdBandRange">Third Band Range:</label>
+            <input autocomplete="off" type="text" id="thirdBandRange" placeholder="e.g., 65-109.9" required>
+            
+            <label for="thirdBandPrice">Third Band Price:</label>
+            <input autocomplete="off" type="text" id="thirdBandPrice" required>
+            
+            <label for="weights">Weights (comma seperated)</label>
+            <textarea name="" id="weights" placeholder="e.g., 56.7, 71.5, 66.75, 69.7, ..."></textarea>
+            
+            <div class="buttons">
+                <button id="button" type="" onclick="generateInvoice()">Invoice</button>
+                <button id="button" type="" onclick="generatePDF()">Print</button>
+            </div>
+        </form>
+
+        <div id="Invoice"></div>
+    </div>   
+    <script src="script.js"></script> 
+</body>
+</html>

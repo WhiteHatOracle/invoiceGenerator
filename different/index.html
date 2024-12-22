@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Invoice Generator</h1>
+    <form id="invoiceForm">
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" placeholder="Enter Company Name" required><br>
+
+      <label for="firstBandRange">First Band Weight Range (Kg):</label>
+      <input type="text" id="firstBandRange" placeholder="e.g., 65-109.9" required><br>
+
+      <label for="firstBandCost">Cost per Kg for First Band:</label>
+      <input type="number" id="firstBandCost" placeholder="Cost per Kg" required><br>
+
+      <label for="secondBandRange">Second Band Weight Range (Kg):</label>
+      <input type="text" id="secondBandRange" placeholder="e.g., 55-64.9" required><br>
+
+      <label for="secondBandCost">Cost per Kg for Second Band:</label>
+      <input type="number" id="secondBandCost" placeholder="Cost per Kg" required><br>
+
+      <label for="thirdBandRange">Third Band Weight Range (Kg):</label>
+      <input type="text" id="thirdBandRange" placeholder="e.g., 30-54.9" required><br>
+
+      <label for="thirdBandCost">Cost per Kg for Third Band:</label>
+      <input type="number" id="thirdBandCost" placeholder="Cost per Kg" required><br>
+
+      <label for="weights">Enter Weights (comma-separated):</label>
+      <textarea id="weights" rows="4" placeholder="e.g., 56.7, 71.5, 66.75, 69.7, ..." required></textarea><br>
+
+      <button type="button" onclick="generateInvoice()">Generate Invoice</button>
+      <button type="button" onclick="downloadPDF()">Download PDF</button>
+    </form>
+
+    <div id="invoiceOutput" class="invoice-output"></div>
+  </div>
+
+</body>
+</html>
